@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.10)
+project(StaticCompileExample CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+file(GLOB_RECURSE INITIALIZER_SOURCES "src/Initializers/*.cpp")
+
+add_executable(MainApp 
+    ./src/Main.cpp 
+    ${INITIALIZER_SOURCES}
+)
+
+target_include_directories(MainApp PRIVATE ./src ./include)
+
+set_target_properties(MainApp PROPERTIES OUTPUT_NAME "Compile")

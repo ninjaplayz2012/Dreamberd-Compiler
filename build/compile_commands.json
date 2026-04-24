@@ -1,0 +1,14 @@
+[
+{
+  "directory": "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/MainApp.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\MainApp.dir\\src\\Main.cpp.obj -c E:\\Coding\\Cs\\C++\\Projects\\Dreamberd-Compiler\\src\\Main.cpp",
+  "file": "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler/src/Main.cpp",
+  "output": "CMakeFiles/MainApp.dir/src/Main.cpp.obj"
+},
+{
+  "directory": "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/MainApp.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\MainApp.dir\\src\\Initializers\\Lexer.cpp.obj -c E:\\Coding\\Cs\\C++\\Projects\\Dreamberd-Compiler\\src\\Initializers\\Lexer.cpp",
+  "file": "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler/src/Initializers/Lexer.cpp",
+  "output": "CMakeFiles/MainApp.dir/src/Initializers/Lexer.cpp.obj"
+}
+]

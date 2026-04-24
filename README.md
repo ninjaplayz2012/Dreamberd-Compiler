@@ -1,4 +1,4 @@
-# GulfOfMexico-Compiler
+# GulfOfMexico-Interpreter
 Funny little project for a portfolio
 
 ## Legal terms or smth

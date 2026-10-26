@@ -5,8 +5,8 @@ param (
 
 # Configuration
 $cmakeExe = "C:\Program Files\CMake\bin\cmake.EXE"
-$buildDir = "e:/Coding/Cs/C++/Projects/Dreamberd-Compiler/build"
-$executable = "./Build/Compile.exe"
+$buildDir = "./build"
+$executable = "./build/Compile.exe"
 $logFile = "output.txt"
 
 Write-Host "Processing... (Check $logFile for details)" -ForegroundColor Cyan

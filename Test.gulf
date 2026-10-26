@@ -1,4 +1,4 @@
 const const Bleh = 10.1!
 if (Bleh = 10) {
-    print(Bleh)
+    print(Bleh)!
 }

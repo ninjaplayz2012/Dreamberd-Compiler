@@ -8,8 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler/src/Initializers/Lexer.cpp" "CMakeFiles/MainApp.dir/src/Initializers/Lexer.cpp.obj" "gcc" "CMakeFiles/MainApp.dir/src/Initializers/Lexer.cpp.obj.d"
-  "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler/src/Main.cpp" "CMakeFiles/MainApp.dir/src/Main.cpp.obj" "gcc" "CMakeFiles/MainApp.dir/src/Main.cpp.obj.d"
+  "C:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler/src/Initializers/Lexer.cpp" "CMakeFiles/MainApp.dir/src/Initializers/Lexer.cpp.obj" "gcc" "CMakeFiles/MainApp.dir/src/Initializers/Lexer.cpp.obj.d"
+  "C:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler/src/Initializers/Parser.cpp" "CMakeFiles/MainApp.dir/src/Initializers/Parser.cpp.obj" "gcc" "CMakeFiles/MainApp.dir/src/Initializers/Parser.cpp.obj.d"
+  "C:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler/src/Main.cpp" "CMakeFiles/MainApp.dir/src/Main.cpp.obj" "gcc" "CMakeFiles/MainApp.dir/src/Main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

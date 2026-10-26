@@ -39,7 +39,7 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "Build type for single-configuration generators (Makefile Generators, Ninja, etc.). Typical values: Debug, Release, RelWithDebInfo, MinSizeRel; custom build types may also be defined."
 				}
 			],
 			"type" : "STRING",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "e:/Coding/Cs/C++/Projects/Dreamberd-Compiler/build"
+			"value" : "c:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "4"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -155,7 +155,7 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "Full path to the compiler used for language <LANG>. Set by CMake during compiler detection on the first configure; users may override on the command line to select a specific toolchain."
 				}
 			],
 			"type" : "FILEPATH",
@@ -295,11 +295,23 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "Full path to the compiler used for language <LANG>. Set by CMake during compiler detection on the first configure; users may override on the command line to select a specific toolchain."
 				}
 			],
 			"type" : "FILEPATH",
 			"value" : "C:/msys64/ucrt64/bin/gcc.exe"
+		},
+		{
+			"name" : "CMAKE_DIAGNOSTIC_INIT",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Set initial state for CMake diagnostics; used to persist state set by command-line options across invocations."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "CMD_AUTHOR=WARN;CMD_DEPRECATED=WARN;CMD_EXPERIMENTAL=WARN;CMD_INSTALL_ABSOLUTE_DESTINATION=IGNORE;CMD_POLICY=WARN;CMD_UNINITIALIZED=IGNORE;CMD_UNUSED_CLI=IGNORE"
 		},
 		{
 			"name" : "CMAKE_DLLTOOL",
@@ -328,6 +340,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "C:/Program Files/CMake/bin/cmake-gui.exe"
+		},
+		{
+			"name" : "CMAKE_ERROR_DEPRECATED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Deprecated.  Use -W[no-]error=deprecated instead."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -427,7 +451,7 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "Enable output of a compile_commands.json file listing the exact compiler invocation for each translation unit. Implemented by the Makefile and Ninja generators; ignored elsewhere."
 				}
 			],
 			"type" : "BOOL",
@@ -455,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -467,7 +491,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "MinGW Makefiles"
+			"value" : "Unix Makefiles"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -527,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler"
+			"value" : "C:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -583,7 +607,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/ucrt64/bin/mingw32-make.exe"
+			"value" : "C:/msys64/usr/bin/make.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -947,7 +971,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/CMake/share/cmake-4.3"
+			"value" : "C:/Program Files/CMake/share/cmake-4.4"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1190,6 +1214,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "CMAKE_WARN_DEPRECATED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Deprecated.  Use -W[no-]deprecated instead."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "StaticCompileExample_BINARY_DIR",
 			"properties" : 
 			[
@@ -1199,7 +1235,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler/build"
+			"value" : "C:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler/build"
 		},
 		{
 			"name" : "StaticCompileExample_IS_TOP_LEVEL",
@@ -1223,7 +1259,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler"
+			"value" : "C:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler"
 		}
 	],
 	"kind" : "cache",

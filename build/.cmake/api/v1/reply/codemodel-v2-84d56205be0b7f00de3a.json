@@ -7,7 +7,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f040eec181a89de70dbe.json",
+					"jsonFile" : "directory-.-Debug-b5805d5c08fd3d92def4.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -40,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "MainApp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MainApp-Debug-f6f5d397adfac3855099.json",
+					"jsonFile" : "target-MainApp-Debug-a49b5397b016b291409f.json",
 					"name" : "MainApp",
 					"projectIndex" : 0
 				}
@@ -50,12 +50,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler/build",
-		"source" : "E:/Coding/Cs/C++/Projects/Dreamberd-Compiler"
+		"build" : "C:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler/build",
+		"source" : "C:/Users/cleon/OneDrive/Documents/Coding/Cs/C++/Projects/Dreamberd-Compiler"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 10
+		"minor" : 11
 	}
 }

@@ -7,6 +7,7 @@
 
 // Configs
 #include "Configs/LexerConfigs.hpp"
+#include "Headers/Lexer.hpp"
 
 // Using
 using std::string;

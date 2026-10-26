@@ -1,7 +1,9 @@
-#include "Configs/LexerConfigs.hpp"
+#include "Headers/Lexer.hpp"
 
 vector<Token<string>> Lexer::Tokenize() {
     vector<Token<string>> Tokens;
+    vector<string> Idents;
+    vector<string> Globals;
     Token<string> PreviousToken;
     string CurrentWord;
     bool Continue = true;
@@ -26,22 +28,67 @@ vector<Token<string>> Lexer::Tokenize() {
         std::cout << CurrentWord << "\n";
         
         if (CurrentWord.empty()) {
-            Tokens.push_back(Token<string>(END_OF_FILE));
+            Tokens.push_back(Token<string>(END_OF_FILE, "", "", CurrentLine));
             break;
         }
-        else if (regex_match(CurrentWord, Keywords)) Tokens.push_back(HandleKeywords(CurrentWord));
-        else if (regex_match(CurrentWord, Special)) Tokens.push_back(HandleSpecial(CurrentWord));
-        else if (regex_match(CurrentWord, Variables) || PreviousIsVarDef()) Tokens.push_back(HandleVariables(CurrentWord));
-        else if (regex_match(CurrentWord, Comparison) || IsCompEqual()) Tokens.push_back(HandleComparison(CurrentWord));
-        else if (regex_match(CurrentWord, Assignment)) Tokens.push_back(HandleAssignment(CurrentWord));
-        else if (regex_match(CurrentWord, Arithmetic)) Tokens.push_back(HandleArithmetic(CurrentWord));
-        else if (regex_match(CurrentWord, Logic)) Tokens.push_back(HandleLogic(CurrentWord));
-        else if (regex_match(CurrentWord, Others)) Tokens.push_back(HandleOthers(CurrentWord));
-        else if (regex_match(CurrentWord, Grouping)) Tokens.push_back(HandleGrouping(CurrentWord));
-        else Tokens.push_back(HandleDataTypes(CurrentWord));
+        else if (regex_match(CurrentWord, Keywords)) {
+            auto Token = HandleKeywords(CurrentWord);
+            Token.Line = CurrentLine;
+            Tokens.push_back(Token);
+        }
+        else if (regex_match(CurrentWord, Special)) {
+            auto Token = HandleSpecial(CurrentWord);
+            Token.Line = CurrentLine;
+            if (Token.Id == END_LINE || Token.Id == END_LINE_2) CurrentLine++;
+            Tokens.push_back(Token);
+        }
+        else if (regex_match(CurrentWord, Variables) || PreviousIsVarDef()) {
+            auto Token = HandleVariables(CurrentWord);
+            Token.Line = CurrentLine;
+            Tokens.push_back(Token);
+            if (Token.Id == IDENT && std::find(Idents.begin(), Idents.end(), Token.Name) == Idents.end()) Idents.push_back(Token.Name);
+            if (Token.Id == GLOBAL && std::find(Globals.begin(), Globals.end(), Token.Name) == Globals.end()) Globals.push_back(Token.Name);
+        }
+        else if (std::find(Idents.begin(), Idents.end(), CurrentWord) != Idents.end()) Tokens.emplace_back(IDENT, CurrentWord, CurrentWord, CurrentLine);
+        else if (std::find(Globals.begin(), Globals.end(), CurrentWord) != Globals.end()) Tokens.emplace_back(IDENT, CurrentWord, CurrentWord, CurrentLine);
+        else if (regex_match(CurrentWord, Comparison) || IsCompEqual()) {
+            auto Token = HandleComparison(CurrentWord);
+            Token.Line = CurrentLine;
+            Tokens.push_back(Token);
+        }
+        else if (regex_match(CurrentWord, Assignment)) {
+            auto Token = HandleAssignment(CurrentWord);
+            Token.Line = CurrentLine;
+            Tokens.push_back(Token);
+        }
+        else if (regex_match(CurrentWord, Arithmetic)) {
+            auto Token = HandleArithmetic(CurrentWord);
+            Token.Line = CurrentLine;
+            Tokens.push_back(Token);
+        }
+        else if (regex_match(CurrentWord, Logic)) {
+            auto Token = HandleLogic(CurrentWord);
+            Token.Line = CurrentLine;
+            Tokens.push_back(Token);
+        }
+        else if (regex_match(CurrentWord, Others)) {
+            auto Token = HandleOthers(CurrentWord);
+            Token.Line = CurrentLine;
+            Tokens.push_back(Token);
+        }
+        else if (regex_match(CurrentWord, Grouping)) {
+            auto Token = HandleGrouping(CurrentWord);
+            Token.Line = CurrentLine;
+            Tokens.push_back(Token);
+        }
+        else {
+            auto Token = HandleDataTypes(CurrentWord);
+            Token.Line = CurrentLine;
+            Tokens.push_back(Token);
+        }
         
         if (Position >= Source.data() + Source.size()) {
-            Tokens.push_back(Token<string>(END_OF_FILE));
+            Tokens.push_back(Token<string>(END_OF_FILE, "", "", CurrentLine));
             break;
         }
     }

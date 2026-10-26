@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MainApp.dir/src/Initializers/Lexer.cpp.obj"
   "CMakeFiles/MainApp.dir/src/Initializers/Lexer.cpp.obj.d"
+  "CMakeFiles/MainApp.dir/src/Initializers/Parser.cpp.obj"
+  "CMakeFiles/MainApp.dir/src/Initializers/Parser.cpp.obj.d"
   "CMakeFiles/MainApp.dir/src/Main.cpp.obj"
   "CMakeFiles/MainApp.dir/src/Main.cpp.obj.d"
   "Compile.exe"
